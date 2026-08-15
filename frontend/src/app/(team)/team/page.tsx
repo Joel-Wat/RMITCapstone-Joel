@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { TeamMemberImage } from '@/components/team/TeamMemberImage'
 
 export const metadata: Metadata = {
   title: 'Team',
@@ -9,6 +10,7 @@ const teamMembers = [
   {
     name: 'TianXiang Hang',
     role: 'PM',
+    image: '/images/team/max.webp',
     description:
       'Responsible for coordinating the project team, managing project progress, and ensuring project goals are achieved.',
     isPM: true,
@@ -16,6 +18,7 @@ const teamMembers = [
   {
     name: 'Gabriel Halvarsson',
     role: 'Dev 1',
+    image: '/images/team/kimi.webp',
     description:
       'Responsible for software development and implementation of project features.',
     isPM: false,
@@ -23,6 +26,7 @@ const teamMembers = [
   {
     name: 'Joel Waterhouse',
     role: 'Dev 2',
+    image: '/images/team/lando.webp',
     description:
       'Responsible for software development and implementation of project features.',
     isPM: false,
@@ -30,6 +34,7 @@ const teamMembers = [
   {
     name: 'Diya Diljith',
     role: 'UX',
+    image: '/images/team/lewis.webp',
     description:
       'Responsible for user interface design and ensuring a consistent user experience.',
     isPM: false,
@@ -37,8 +42,9 @@ const teamMembers = [
   {
     name: 'Anas Rizwan',
     role: 'BA',
+    image: '/images/team/george.webp',
     description:
-      'BA description here.',
+      'Responsible for analysing business requirements and translating stakeholder needs into project requirements.',
     isPM: false,
   },
 ]
@@ -73,9 +79,11 @@ function TeamCard({
 }) {
   return (
     <div className="w-full max-w-sm rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
-      {/* Image placeholder */}
-      <div className="mx-auto mb-5 flex h-32 w-32 items-center justify-center rounded-full bg-zinc-100 text-sm text-zinc-600">
-        Image
+      <div className="relative mx-auto mb-5 h-32 w-32 overflow-hidden rounded-full bg-zinc-100">
+        <TeamMemberImage
+          src={member.image}
+          name={member.name}
+        />
       </div>
 
       <div className="text-center">
