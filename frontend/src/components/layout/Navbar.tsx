@@ -22,14 +22,7 @@ export function Navbar() {
       </div>
       <div className="flex-1" />
       <div className="flex items-center gap-3">
-        {user && <span className="hidden text-sm text-zinc-500 sm:block">{user.email}</span>}
-        <Link
-          href="/profile"
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-100 text-zinc-600 transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700"
-          aria-label="Profile"
-        >
-          <User className="h-4 w-4" />
-        </Link>
+        {user && <span className="hidden text-sm text-zinc-500 sm:block">Welcome, {user.email}</span>}
         <button
           type="button"
           onClick={handleSignOut}

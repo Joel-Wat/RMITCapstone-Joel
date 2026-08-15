@@ -8,33 +8,36 @@ export const metadata: Metadata = {
 
 export default function LandingPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-8 p-8">
-      <div className="space-y-4 text-center">
-        <h1 className="text-4xl font-bold tracking-tight">
-          {process.env.NEXT_PUBLIC_APP_NAME ?? 'App'}
-        </h1>
-        <p className="max-w-md text-lg text-zinc-600 dark:text-zinc-400">
-          Your app description goes here. Edit{' '}
-          <code className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-sm dark:bg-zinc-800">
-            src/app/page.tsx
-          </code>{' '}
-          to get started.
-        </p>
-      </div>
-      <div className="flex gap-4">
-        <Link
-          href="/auth/signin"
-          className="inline-flex items-center justify-center rounded-md bg-black px-6 py-2.5 text-sm font-medium text-white shadow transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
-        >
-          Sign in
-        </Link>
-        <Link
-          href="/auth/signup"
-          className="inline-flex items-center justify-center rounded-md border border-zinc-200 bg-white px-6 py-2.5 text-sm font-medium shadow-sm transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-        >
-          Create account
-        </Link>
-      </div>
+    <main className="flex min-h-screen flex-col">
+      <section className="flex flex-1 items-center justify-center p-8">
+        <div className="w-full max-w-5xl bg-white px-16 py-20 text-center">
+          <div className="space-y-4 text-center">
+            <h1 className="text-4xl font-bold tracking-tight">
+              Project 26: Grand Prix Ecosystem Operations Team 2
+            </h1>
+
+            <p className="mx-auto max-w-md text-lg text-zinc-600">
+              Welcome to the landing page!
+            </p>
+          </div>
+
+          <div className="mt-8 flex justify-center gap-4">
+            <Link
+              href="/auth/signin"
+              className="inline-flex items-center justify-center rounded-md bg-purple-600 px-6 py-2.5 text-sm font-medium text-white shadow transition-colors hover:bg-purple-700"
+            >
+              Sign in
+            </Link>
+
+            <Link
+              href="/auth/signup"
+              className="inline-flex items-center justify-center rounded-md border border-zinc-200 bg-white px-6 py-2.5 text-sm font-medium shadow-sm transition-colors hover:bg-zinc-100"
+            >
+              Create account
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

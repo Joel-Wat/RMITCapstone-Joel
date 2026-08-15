@@ -38,7 +38,7 @@ const teamMembers = [
     name: 'Anas Rizwan',
     role: 'BA',
     description:
-      'Responsible for software development, testing, and implementation of project features.',
+      'BA description here.',
     isPM: false,
   },
 ]
@@ -48,19 +48,21 @@ export default function TeamPage() {
   const team = teamMembers.filter((member) => !member.isPM)
 
   return (
-    <div className="space-y-8">
-      {projectManager && (
-        <div className="flex justify-center">
-          <TeamCard member={projectManager} />
-        </div>
-      )}
+    <main className="flex min-h-screen flex-col items-center justify-center gap-8 p-8">
+      <div className="space-y-8">
+        {projectManager && (
+          <div className="flex justify-center">
+            <TeamCard member={projectManager} />
+          </div>
+        )}
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {team.map((member) => (
-          <TeamCard key={member.name} member={member} />
-        ))}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {team.map((member) => (
+            <TeamCard key={member.name} member={member} />
+          ))}
+        </div>
       </div>
-    </div>
+    </main>
   )
 }
 
@@ -72,7 +74,7 @@ function TeamCard({
   return (
     <div className="w-full max-w-sm rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
       {/* Image placeholder */}
-      <div className="mx-auto mb-5 flex h-32 w-32 items-center justify-center rounded-full bg-zinc-100 text-sm text-zinc-400">
+      <div className="mx-auto mb-5 flex h-32 w-32 items-center justify-center rounded-full bg-zinc-100 text-sm text-zinc-600">
         Image
       </div>
 
@@ -83,7 +85,7 @@ function TeamCard({
           {member.role}
         </p>
 
-        <p className="mt-3 text-sm leading-6 text-zinc-500">
+        <p className="mt-3 text-sm leading-6 text-zinc-600">
           {member.description}
         </p>
       </div>
