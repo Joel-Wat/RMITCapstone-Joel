@@ -55,6 +55,9 @@ export default function TeamPage() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-8 p-8">
+
+      <h1 className="text-center text-2xl font-bold text-white">Meet The Team!</h1>
+
       <div className="space-y-8">
         {projectManager && (
           <div className="flex justify-center">
