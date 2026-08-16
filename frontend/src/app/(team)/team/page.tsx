@@ -71,6 +71,11 @@ export default function TeamPage() {
     </main>
   )
 }
+function truncateWords(text: string, wordLimit: number) {
+  const words = text.trim().split(/\s+/)
+  if (words.length <= wordLimit) return text
+  return words.slice(0, wordLimit).join(' ') + '...'
+}
 
 function TeamCard({
   member,
@@ -93,8 +98,12 @@ function TeamCard({
           {member.role}
         </p>
 
-        <p className="mt-3 text-sm leading-6 text-zinc-600">
+        {/* <p className="mt-3 text-sm leading-6 text-zinc-600">
           {member.description}
+        </p>
+ */}
+        <p className="mt-3 text-sm leading-6 text-zinc-600">
+          {truncateWords(member.description, 13)}
         </p>
       </div>
     </div>
