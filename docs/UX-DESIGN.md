@@ -31,7 +31,8 @@ https://www.figma.com/design/kpd3Xetg710lrMz9sOQBBe/Untitled?node-id=1-77&t=kufu
 ## Design Files
 
 - `ux/teampage-wireframe.png`
-- `ux/login_wireframe` 
+- `ux/login_wireframe`
+- `ux/signup-wireframe` 
 ## Handoff
 
 The design was produced from the BA requirements and provided to development for implementation.
