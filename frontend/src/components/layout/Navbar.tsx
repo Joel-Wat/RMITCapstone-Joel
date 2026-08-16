@@ -14,11 +14,12 @@ export function Navbar() {
     router.replace('/auth/signin')
     router.refresh()
   }
-
+{/* {process.env.NEXT_PUBLIC_APP_NAME ?? 'App'} */}
   return (
     <header className="flex h-14 items-center justify-between border-b border-zinc-200 bg-white px-4 dark:border-zinc-800 dark:bg-zinc-900">
-      <div className="text-sm font-semibold lg:hidden">
-        {process.env.NEXT_PUBLIC_APP_NAME ?? 'App'}
+      <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <div>Capstone Project</div>
+        <div className="text-xs font-normal text-zinc-500">team-26</div>
       </div>
       <div className="flex-1" />
       <div className="flex items-center gap-3">
